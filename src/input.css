@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .gray-card {
+    @apply flex justify-center items-center mx-auto max-w-[576px] w-full py-5 bg-light-gray mt-10;
+  }
+  .sub-text {
+    @apply text-gray-500 text-sm;
+  }
+  .main-text {
+    @apply text-dark-gray;
+  }
+  .btn {
+    @apply border-2 border-dark-gray rounded w-[228px] py-2 text-sm main-text active:border-tan active:text-tan text-center;
+  }
+}
