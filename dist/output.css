@@ -443,10 +443,21 @@ video {
   max-width: 576px;
   align-items: center;
   justify-content: center;
+  text-align: center;
   --tw-bg-opacity: 1;
   background-color: rgb(239 242 246 / var(--tw-bg-opacity));
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+li {
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.name-and-number {
+  display: flex;
+  flex-direction: row;
 }
 
 .sub-text {
