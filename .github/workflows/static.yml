@@ -25,21 +25,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5
 
       - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
 
-      # Workaround: preload upload-artifact@v4 to suppress internal v3 dependency failure
-      - name: Preload upload-artifact@v4 to avoid v3 error
-        uses: actions/upload-artifact@v4
-        with:
-          name: dummy
-          path: README.md
-        continue-on-error: true
-
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v3
+        uses: actions/deploy-pages@v4
