@@ -36,7 +36,14 @@ jobs:
         with:
           path: './dist'
 
+      - name: Preload upload-artifact@v4 to avoid v3 error
+        uses: actions/upload-artifact@v4
+        with:
+          name: dummy
+          path: README.md
+        continue-on-error: true
+
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v3
 
